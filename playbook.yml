@@ -2,8 +2,6 @@
 - hosts: webserver
   become: true
   become_user: root
-  vars:
-   ansible_python_interpreter: "/usr/bin/python3"
   tasks:
   - name: install docker
     yum: name=docker state=present
